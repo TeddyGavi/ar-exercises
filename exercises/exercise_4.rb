@@ -34,3 +34,10 @@ Yaletown.save
   puts "#{mens_store.name.ljust(15) + mens_store.annual_revenue.to_s}"
 end
 
+@womens_under_1M = Store.where(womens_apparel: true, annual_revenue: ...1000000)
+
+@womens_under_1M.each do |womens|
+  puts "#{womens.name.ljust(15) + womens.annual_revenue.to_s}"
+end
+
+
