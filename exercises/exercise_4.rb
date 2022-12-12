@@ -27,3 +27,10 @@ Yaletown.annual_revenue = 430000
 Yaletown.mens_apparel = true
 Yaletown.womens_apparel = true
 Yaletown.save
+
+@mens_stores = Store.where(mens_apparel: true)
+
+@mens_stores.each do |mens_store|
+  puts "#{mens_store.name.ljust(15) + mens_store.annual_revenue.to_s}"
+end
+
