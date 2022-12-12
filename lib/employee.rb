@@ -4,7 +4,7 @@ class Employee < ActiveRecord::Base
   validates :last_name, presence: true
   validates :hourly_rate, numericality: { only_integer: true } 
   validates_inclusion_of :hourly_rate, :in => 40..200
-  # validates :store, presence: true, uniqueness: true
+  validates :store, presence: true
   
 end
 
