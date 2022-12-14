@@ -19,7 +19,7 @@ testOne = Store.new
 testOne.name = 'testOne'
 testOne.annual_revenue = 0
 testOne.mens_apparel = true
-testOne.womens_apparel = true
+testOne.womens_apparel = false
 
 testTwo = Store.new
 testTwo.name = 'Hi'
@@ -27,5 +27,19 @@ testTwo.annual_revenue = 3000000000
 testTwo.mens_apparel = true
 testTwo.womens_apparel = true
 
+testThree = Store.new
+testThree.name = 'testThree'
+testThree.annual_revenue = 3000000
+testThree.mens_apparel = false
+testThree.womens_apparel = false 
+
+puts "testing"
+
 puts testOne.valid?
+puts testOne.errors.full_messages
 puts testTwo.valid?
+puts testTwo.errors.full_messages
+puts testThree.valid?
+puts testThree.errors.full_messages
+
+puts "----------"
