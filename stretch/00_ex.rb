@@ -1,4 +1,4 @@
-# auto generate password for eomployees
+# auto generate password for employees
 
 require_relative '../setup'
 require_relative '../exercises/exercise_1'
@@ -7,6 +7,7 @@ require_relative '../exercises/exercise_3'
 require_relative '../exercises/exercise_4'
 require_relative '../exercises/exercise_5'
 require_relative '../exercises/exercise_6'
+require_relative '../exercises/exercise_7
 
 puts "STRETCH 1
 ---------------"
