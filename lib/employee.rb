@@ -5,6 +5,12 @@ class Employee < ActiveRecord::Base
   validates :hourly_rate, numericality: { only_integer: true } 
   validates_inclusion_of :hourly_rate, :in => 40..200
   validates :store, presence: true
+  before_create :gen_password
   
+private
+  def gen_password
+    self.password = (0...8).map { (65 + rand(26)).chr }.join
+  end
+
 end
 
