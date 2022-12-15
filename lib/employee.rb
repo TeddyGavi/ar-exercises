@@ -9,6 +9,8 @@ class Employee < ActiveRecord::Base
   
 private
   def gen_password
+    # this is done when we use before_create
+    # self.password = ...the password from below 
     Employee.update(self.id, :password => (0...8).map { (65 + rand(26)).chr }.join) 
   end
 
